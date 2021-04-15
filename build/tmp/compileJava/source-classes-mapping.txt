@@ -1,0 +1,27 @@
+machine/coin/BCoinInserter.java
+ machine.coin.BCoinInserter
+ machine.coin.BCoinInserter$CoinKind
+machine/display/DisplayD.java
+ machine.display.DisplayD
+machine/money/MoneyInserter.java
+ machine.money.MoneyInserter
+machine/vendor/VendingMachine.java
+ machine.vendor.VendingMachine
+CuiMain.java
+ CuiMain
+machine/display/Display.java
+ machine.display.Display
+machine/display/Languages.java
+ machine.display.Languages
+machine/bill/BillInserter.java
+ machine.bill.BillInserter
+machine/display/EngMessages.java
+ machine.display.EngMessages
+machine/display/Messages.java
+ machine.display.Messages
+machine/vendor/VendingMachineA.java
+ machine.vendor.VendingMachineA
+machine/coin/CoinInserter.java
+ machine.coin.CoinInserter
+config/AppConfig.java
+ config.AppConfig
