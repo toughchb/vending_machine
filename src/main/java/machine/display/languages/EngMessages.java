@@ -2,7 +2,10 @@ package machine.display.languages;
 
 public class EngMessages extends Messages{
 
-    private static final String INSERT_MONEY_MENU = "insert money\n";
+    @Override
+    public String getLanguageString() {
+        return "KOREAN";
+    }
 
     @Override
     public String getLanguageMenu() {

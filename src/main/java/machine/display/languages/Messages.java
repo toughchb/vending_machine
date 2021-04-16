@@ -9,6 +9,7 @@ public abstract class Messages {
     private String insertMoneyMenu;
     private String returnChange;
 
+    public abstract String getLanguageString();
 
     public abstract String getLanguageMenu() ;
 
