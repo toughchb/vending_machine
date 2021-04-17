@@ -25,10 +25,10 @@ public abstract class Display {
         System.out.println("select Language");
         //Languages[] values = Languages.values();
 
-        for (int i = 0; i < langOptions.size(); i++) {
-            System.out.println((i+1) + ". " + langOptions.get(i).getLanguageString());
-            System.out.println("0. exit");
+        for (int i = 1; i <= langOptions.size(); i++) {
+            System.out.println((i) + ". " + langOptions.get(i).getLanguageString());
         }
+        System.out.println("0. exit");
         System.out.println(">>");
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
@@ -43,6 +43,7 @@ public abstract class Display {
                     this.messages = langOptions.get(2);
                     break;
                 case 0:
+                    // TODO: exit
                     break;
                 default:
                     break;
@@ -55,12 +56,12 @@ public abstract class Display {
 
     }
 
-    abstract void printMainMenu();
+    abstract public void printMainMenu();
 
-    abstract void printInsertMoneyMenu();
+    abstract public void printInsertMoneyMenu();
 
-    abstract void printReturnChange();
+    abstract public void printReturnChange();
 
-    abstract void printSelectProductMenu();
+    abstract public void printSelectProductMenu();
 
 }

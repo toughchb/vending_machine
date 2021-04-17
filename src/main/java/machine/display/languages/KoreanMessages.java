@@ -18,6 +18,16 @@ public class KoreanMessages extends Messages{
     }
 
     @Override
+    public String getCoinKindMenu() {
+        return null;
+    }
+
+    @Override
+    public String getBillKindMenu() {
+        return null;
+    }
+
+    @Override
     public String getInsertMoneyMenu() {
         return null;
     }

@@ -12,7 +12,7 @@ import machine.vendor.AVendingMachine;
 public class AppConfig {
 
     CoinInserter coinInserter(){
-        return BCoinInserter.getInstance();
+        return new BCoinInserter();
     }
 
     BillInserter billInserter() {

@@ -4,7 +4,7 @@ public class EngMessages extends Messages{
 
     @Override
     public String getLanguageString() {
-        return "KOREAN";
+        return "ENGLISH";
     }
 
     @Override
@@ -28,7 +28,21 @@ public class EngMessages extends Messages{
 
     @Override
     public String getInsertMoneyMenu() {
-        return null;
+        return "select money kind\n" +
+                "1. coins" +
+                "2. bills" +
+                "0. exit";
+    }
+
+    @Override
+    public String getCoinKindMenu() {
+        return "select coin kind\n";
+
+    }
+
+    @Override
+    public String getBillKindMenu() {
+        return "select bill kind\n";
     }
 
     @Override

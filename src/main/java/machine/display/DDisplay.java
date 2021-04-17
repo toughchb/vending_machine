@@ -1,23 +1,25 @@
 package machine.display;
 public class DDisplay extends Display{
 
+    /* Map<Insert, String> coinKind ==should declare a Map that is from coin inserter */
     @Override
-    void printMainMenu() {
-        super.messages.getLanguageMenu();
+    public void printMainMenu() {
+        System.out.println(super.messages.getMainMenu());
     }
 
     @Override
-    void printInsertMoneyMenu() {
+    public void printInsertMoneyMenu() {
+        System.out.println(super.messages.getInsertMoneyMenu());
+        System.out.println();/* print 'coinKind' */
+    }
+
+    @Override
+    public void printReturnChange() {
 
     }
 
     @Override
-    void printReturnChange() {
-
-    }
-
-    @Override
-    void printSelectProductMenu() {
+    public void printSelectProductMenu() {
 
     }
 }

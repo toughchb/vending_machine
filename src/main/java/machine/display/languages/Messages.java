@@ -17,5 +17,9 @@ public abstract class Messages {
 
     public abstract String getInsertMoneyMenu();
 
+    public abstract String getCoinKindMenu();
+
+    public abstract String getBillKindMenu();
+
     public abstract String getReturnChange();
 }

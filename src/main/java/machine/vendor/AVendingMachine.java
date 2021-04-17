@@ -16,6 +16,8 @@ public class AVendingMachine implements VendingMachine {
     private final CoinInserter ci;
     private final BillInserter bi;
 
+    //TODO: ci 에서 받아올 coin 종류 맵
+
 
     public AVendingMachine(Display display, CoinInserter ci, BillInserter bi) {
         this.display = display;
@@ -29,13 +31,15 @@ public class AVendingMachine implements VendingMachine {
 
     }
 
-    public void run() {
+    public void start() {
         display.selectLanguage();
-
+        display.printMainMenu();
     }
 
     @Override
     public void insertMoney(int money) {
+        display.printInsertMoneyMenu();
+
         }
 
     @Override
