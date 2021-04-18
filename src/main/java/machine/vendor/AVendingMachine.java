@@ -10,17 +10,17 @@ import java.util.Scanner;
 
 public class AVendingMachine implements VendingMachine {
 
-    private int money;
-    private final Map<String, Integer> productsAndPrices = new HashMap<String, Integer>(){{
-        put("캔음료", 500);
-        put("신문", 1000);
+    private double money;
+    private final Map<String, Double> productsAndPrices = new HashMap<String, Double>(){{
+        put("캔음료", 500.0);
+        put("신문", 1000.0);
     }};
-    private Map<Integer,String> optAndProducts = new HashMap<Integer,String>(){{
+    private final Map<Integer,String> optAndProducts = new HashMap<Integer,String>(){{
         put(1,"캔음료");
         put(2, "신문");
     }};
     private Map<Integer, String> coinKinds;// ci 에서 받아올 coin 종류 맵
-    private Map<Integer, String> billKinds;// bi 에서 받아올 coin 종류 맵
+    private Map<Integer, String> billKinds;// bi 에서 받아올 bill 종류 맵
 
 
     private final Display display;
@@ -121,7 +121,7 @@ public class AVendingMachine implements VendingMachine {
 
         if(optAndProducts.containsKey(opt)){
             // money 랑 비교 물품의 가격이 money 보다 크면에러
-            Integer selectedPrice = productsAndPrices.get(optAndProducts.get(opt));
+            double selectedPrice = productsAndPrices.get(optAndProducts.get(opt));
             if (selectedPrice > money) {
                 display.printNotEnoughMoneyError();
             }

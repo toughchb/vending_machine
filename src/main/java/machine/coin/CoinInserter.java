@@ -7,5 +7,5 @@ public interface CoinInserter {
     /* for displaying */
     Map<Integer,String> getCoinKinds();
     String findKindByOpt(int opt);
-    int getMoneyAmount(String moneyKey);
+    double getMoneyAmount(String moneyKey);
 }

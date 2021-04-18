@@ -7,5 +7,5 @@ public interface BillInserter {
     /* for displaying */
     Map<Integer,String> getBillKinds();
     String findKindByOpt(int opt);
-    int getMoneyAmount(String moneyKey);
+    double getMoneyAmount(String moneyKey);
 }

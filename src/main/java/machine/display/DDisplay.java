@@ -37,7 +37,7 @@ public class DDisplay extends Display{
     }
 
     @Override
-    public void printSelectProductMenu(Map<Integer,String> productOptions, int money) {
+    public void printSelectProductMenu(Map<Integer,String> productOptions, double money) {
         System.out.println(messages.getSelectProductMenu());
         System.out.println("change money: " + money);
         printMapValuesAndExit(productOptions);

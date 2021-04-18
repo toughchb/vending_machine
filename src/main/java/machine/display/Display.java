@@ -17,8 +17,6 @@ public abstract class Display {
         langOptions.put(2, new EngMessages());
     }
 
-
-
     public void selectLanguage() {
         System.out.println("\n<< select Language >>");
 
@@ -61,7 +59,7 @@ public abstract class Display {
 
     abstract public void printReturnChange();
 
-    abstract public void printSelectProductMenu(Map<Integer,String> productOptions, int money);
+    abstract public void printSelectProductMenu(Map<Integer,String> productOptions, double money);
 
     abstract public void setCoinKinds(Map<Integer, String> coinKinds);
 

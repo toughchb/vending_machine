@@ -3,18 +3,19 @@ package machine.bill;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CBillInserter implements BillInserter{
+public class EBillInserter implements BillInserter{
+
     private final Map<Integer,String> billKinds = new HashMap<Integer,String>()
     {{
-        put(1,"KRW_10000");
-        put(2,"KRW_5000");
-        put(3,"KRW_1000");
+        put(1,"USD_100");
+        put(2,"USD_10");
+        put(3,"USD_1");
     }};
     private final Map<String,Double> billMoney = new HashMap<String,Double>()
     {{
-        put("KRW_10000",10000.0);
-        put("KRW_5000",5000.0);
-        put("KRW_1000",1000.0);
+        put("USD_100",100.0);
+        put("USD_10",10.0);
+        put("USD_1",1.0);
     }};
 
     @Override

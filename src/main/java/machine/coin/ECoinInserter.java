@@ -1,29 +1,26 @@
 package machine.coin;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class BCoinInserter implements CoinInserter{
+public class ECoinInserter implements CoinInserter{
 
     private final Map<Integer,String> coinKinds = new HashMap<Integer,String>()
     {{
-        put(1,"KRW_500");
-        put(2,"KRW_100");
-        put(3,"KRW_50");
+        put(1,"USD_0.5");
+        put(2,"USD_0.25");
+        put(3,"USD_0.1");
     }};
     private final Map<String,Double> coinMoney = new HashMap<String,Double>()
     {{
-        put("KRW_500",500.0);
-        put("KRW_100",100.0);
-        put("KRW_50",50.0);
+        put("USD_0.5",0.5);
+        put("USD_0.25",0.25);
+        put("USD_0.1",0.1);
     }};
-
 
     @Override
     public boolean checkAvailable(int opt) {
-       return coinKinds.containsKey(opt);
+        return coinKinds.containsKey(opt);
     }
 
     @Override
@@ -35,6 +32,7 @@ public class BCoinInserter implements CoinInserter{
         return coinKinds.get(opt);
     }
 
+    @Override
     public double getMoneyAmount(String moneyKey) {
         return coinMoney.get(moneyKey);
     }
