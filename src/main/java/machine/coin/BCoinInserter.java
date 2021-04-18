@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class BCoinInserter implements CoinInserter{
 
-    private final Map<Integer,String> coinKind = new HashMap<Integer,String>()
+    private final Map<Integer,String> coinKinds = new HashMap<Integer,String>()
     {{
         put(1,"KRW_500");
         put(2,"KRW_100");
@@ -23,13 +23,16 @@ public class BCoinInserter implements CoinInserter{
 
     @Override
     public boolean checkAvailable(int opt) {
-       return coinKind.containsKey(opt);
+       return coinKinds.containsKey(opt);
     }
 
     @Override
-    /* for displaying */
-    public Map<Integer,String> getCoinKind() {
-        return coinKind;
+    public Map<Integer,String> getCoinKinds() {
+        return coinKinds;
+    }
+
+    public String findKindByOpt(int opt) {
+        return coinKinds.get(opt);
     }
 
     public int getMoneyAmount(String moneyKey) {

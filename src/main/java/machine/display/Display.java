@@ -4,9 +4,7 @@ import machine.display.languages.EngMessages;
 import machine.display.languages.KoreanMessages;
 import machine.display.languages.Messages;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public abstract class Display {
 
@@ -22,8 +20,7 @@ public abstract class Display {
 
 
     public void selectLanguage() {
-        System.out.println("select Language");
-        //Languages[] values = Languages.values();
+        System.out.println("\n<< select Language >>");
 
         for (int i = 1; i <= langOptions.size(); i++) {
             System.out.println((i) + ". " + langOptions.get(i).getLanguageString());
@@ -52,16 +49,30 @@ public abstract class Display {
         } catch (NumberFormatException e) {
             System.err.println("input is not available");
         }
-
-
     }
 
     abstract public void printMainMenu();
 
     abstract public void printInsertMoneyMenu();
 
+    abstract public void printSelectCoinKindMenu();
+
+    public abstract void printSelectBillKindMenu();
+
     abstract public void printReturnChange();
 
-    abstract public void printSelectProductMenu();
+    abstract public void printSelectProductMenu(Map<Integer,String> productOptions, int money);
+
+    abstract public void setCoinKinds(Map<Integer, String> coinKinds);
+
+    abstract public void setBillKinds(Map<Integer, String> coinKinds);
+
+    abstract public void printCoinSelectError();
+
+    abstract public void printBillSelectError();
+
+    abstract public void printProductSelectError();
+
+    abstract public void printNotEnoughMoneyError();
 
 }

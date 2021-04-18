@@ -1,25 +1,26 @@
 package machine.display.languages;
 
-public abstract class Messages {
+public interface Messages {
 
-    //private final String languageMenu;
+    String getLanguageString();
+    
+     String getMainMenu();
 
-    private String languageMenu;
-    private String mainMenu;
-    private String insertMoneyMenu;
-    private String returnChange;
+     String getSelectMoneyKindMenu();
 
-    public abstract String getLanguageString();
+     String getCoinKindMenu();
 
-    public abstract String getLanguageMenu() ;
+     String getBillKindMenu();
 
-    public abstract String getMainMenu();
+     String getReturnChange();
 
-    public abstract String getInsertMoneyMenu();
+     String getCoinSelectError();
 
-    public abstract String getCoinKindMenu();
+     String getBillSelectError();
 
-    public abstract String getBillKindMenu();
+     String getProductSelectError();
 
-    public abstract String getReturnChange();
+     String getSelectProductMenu();
+
+     String getNotEnoughMoneyError();
 }
