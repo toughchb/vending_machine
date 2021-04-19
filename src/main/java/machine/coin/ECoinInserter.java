@@ -1,10 +1,13 @@
 package machine.coin;
 
+import machine.common.Currency;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ECoinInserter implements CoinInserter{
 
+    private final Currency supportCurrency = Currency.USD;
     private final Map<Integer,String> coinKinds = new HashMap<Integer,String>()
     {{
         put(1,"USD_0.5");
@@ -17,6 +20,11 @@ public class ECoinInserter implements CoinInserter{
         put("USD_0.25",0.25);
         put("USD_0.1",0.1);
     }};
+
+    @Override
+    public Currency getSupportCurrency() {
+        return supportCurrency;
+    }
 
     @Override
     public boolean checkAvailable(int opt) {

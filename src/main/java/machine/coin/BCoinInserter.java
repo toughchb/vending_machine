@@ -1,5 +1,7 @@
 package machine.coin;
 
+import machine.common.Currency;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.Map;
 
 public class BCoinInserter implements CoinInserter{
 
+    private final Currency supportCurrency = Currency.KRW;
     private final Map<Integer,String> coinKinds = new HashMap<Integer,String>()
     {{
         put(1,"KRW_500");
@@ -20,6 +23,10 @@ public class BCoinInserter implements CoinInserter{
         put("KRW_50",50.0);
     }};
 
+    @Override
+    public Currency getSupportCurrency() {
+        return supportCurrency;
+    }
 
     @Override
     public boolean checkAvailable(int opt) {

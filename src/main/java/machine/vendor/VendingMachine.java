@@ -9,4 +9,7 @@ public interface VendingMachine {
     void selectProduct();
     void selectCoinKind();
     void selectBillKind();
+    void menuSelectionError();
+    boolean checkInsertersCurrency();
+    boolean checkMachinesCurrency();
 }

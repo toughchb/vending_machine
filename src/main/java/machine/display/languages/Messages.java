@@ -14,6 +14,8 @@ public interface Messages {
 
      String getReturnChange();
 
+     String getMainMenuSelectError();
+
      String getCoinSelectError();
 
      String getBillSelectError();
@@ -23,4 +25,8 @@ public interface Messages {
      String getSelectProductMenu();
 
      String getNotEnoughMoneyError();
+
+     String getInsertersCurrencyNotEqual();
+
+     String getMachinesCurrencyNotEqual();
 }

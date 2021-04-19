@@ -1,10 +1,13 @@
 package machine.bill;
 
+import machine.common.Currency;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class EBillInserter implements BillInserter{
 
+    private final Currency supportCurrency = Currency.USD;
     private final Map<Integer,String> billKinds = new HashMap<Integer,String>()
     {{
         put(1,"USD_100");
@@ -17,6 +20,11 @@ public class EBillInserter implements BillInserter{
         put("USD_10",10.0);
         put("USD_1",1.0);
     }};
+
+    @Override
+    public Currency getSupportCurrency() {
+        return supportCurrency;
+    }
 
     @Override
     public boolean checkAvailable(int opt) {

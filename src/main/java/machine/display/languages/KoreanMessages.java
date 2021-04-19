@@ -44,6 +44,11 @@ public class KoreanMessages implements Messages{
     }
 
     @Override
+    public String getMainMenuSelectError() {
+        return "잘못된 메인 메뉴의 선택입니다.";
+    }
+
+    @Override
     public String getCoinSelectError() {
         return "잘못된 동전의 선택 입니다.";
     }
@@ -66,5 +71,15 @@ public class KoreanMessages implements Messages{
     @Override
     public String getNotEnoughMoneyError() {
         return "돈이 모자랍니다!!";
+    }
+
+    @Override
+    public String getInsertersCurrencyNotEqual() {
+        return "동전, 지폐 투입기의 통화 종류가 다릅니다!!";
+    }
+
+    @Override
+    public String getMachinesCurrencyNotEqual() {
+        return "동전 , 지폐 투입기, 자판기의 통화 종류가 다릅니다!!";
     }
 }

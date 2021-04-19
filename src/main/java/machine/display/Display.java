@@ -1,6 +1,6 @@
 package machine.display;
 
-import machine.display.languages.EngMessages;
+import machine.display.languages.EnglishMessages;
 import machine.display.languages.KoreanMessages;
 import machine.display.languages.Messages;
 
@@ -8,14 +8,13 @@ import java.util.*;
 
 public abstract class Display {
 
-    protected Messages messages;
+    protected Messages messages = new EnglishMessages(); //default language = English
 
-    private static Map<Integer, Messages> langOptions =  new HashMap<>();
-
-    static {
-        langOptions.put(1, new KoreanMessages());
-        langOptions.put(2, new EngMessages());
-    }
+    private static final Map<Integer, Messages> langOptions =  new HashMap<Integer, Messages>()
+    {{
+        put(1, new KoreanMessages());
+        put(2, new EnglishMessages());
+    }};
 
     public void selectLanguage() {
         System.out.println("\n<< select Language >>");
@@ -38,7 +37,7 @@ public abstract class Display {
                     this.messages = langOptions.get(2);
                     break;
                 case 0:
-                    // TODO: exit
+                    System.exit(0);
                     break;
                 default:
                     break;
@@ -59,11 +58,13 @@ public abstract class Display {
 
     abstract public void printReturnChange();
 
-    abstract public void printSelectProductMenu(Map<Integer,String> productOptions, double money);
+    abstract public void printSelectProductMenu(Map<Integer,String> productOptions, Map<String, Double> productPrice, double money);
 
     abstract public void setCoinKinds(Map<Integer, String> coinKinds);
 
     abstract public void setBillKinds(Map<Integer, String> coinKinds);
+
+    abstract public void printMainMenuSelectError();
 
     abstract public void printCoinSelectError();
 
@@ -72,5 +73,11 @@ public abstract class Display {
     abstract public void printProductSelectError();
 
     abstract public void printNotEnoughMoneyError();
+
+    abstract public void printInsertersCurrencyNotEqualError();
+
+    abstract public void printMachinesCurrencyNotEqualError();
+
+
 
 }

@@ -1,9 +1,13 @@
 package machine.bill;
 
+import machine.common.Currency;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class CBillInserter implements BillInserter{
+
+    private final Currency supportCurrency = Currency.KRW;
     private final Map<Integer,String> billKinds = new HashMap<Integer,String>()
     {{
         put(1,"KRW_10000");
@@ -16,6 +20,11 @@ public class CBillInserter implements BillInserter{
         put("KRW_5000",5000.0);
         put("KRW_1000",1000.0);
     }};
+
+    @Override
+    public Currency getSupportCurrency() {
+        return supportCurrency;
+    }
 
     @Override
     public boolean checkAvailable(int opt) {

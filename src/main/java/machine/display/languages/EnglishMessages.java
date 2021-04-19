@@ -1,6 +1,6 @@
 package machine.display.languages;
 
-public class EngMessages implements Messages{
+public class EnglishMessages implements Messages{
 
     @Override
     public String getLanguageString() {
@@ -43,6 +43,11 @@ public class EngMessages implements Messages{
     }
 
     @Override
+    public String getMainMenuSelectError() {
+        return "Main Menu Select Error";
+    }
+
+    @Override
     public String getCoinSelectError() {
         return "Coin Select Error";
     }
@@ -65,5 +70,15 @@ public class EngMessages implements Messages{
     @Override
     public String getNotEnoughMoneyError(){
         return "Not Enough Money!!";
+    }
+
+    @Override
+    public String getInsertersCurrencyNotEqual() {
+        return "Coin, Bill Inserters Currency Is Not Equal!!";
+    }
+
+    @Override
+    public String getMachinesCurrencyNotEqual() {
+        return "Coin, Bill Inserters, Vending Machine Currency Is Not Equal!!";
     }
 }

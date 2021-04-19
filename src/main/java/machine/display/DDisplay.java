@@ -37,10 +37,10 @@ public class DDisplay extends Display{
     }
 
     @Override
-    public void printSelectProductMenu(Map<Integer,String> productOptions, double money) {
+    public void printSelectProductMenu(Map<Integer,String> productOptions, Map<String, Double> productPrice, double money) {
         System.out.println(messages.getSelectProductMenu());
         System.out.println("change money: " + money);
-        printMapValuesAndExit(productOptions);
+        printProductAndPriceExit(productOptions, productPrice);
     }
 
     @Override
@@ -81,8 +81,40 @@ public class DDisplay extends Display{
         System.out.println(">>");
     }
 
+    private void printProductAndPriceExit(Map<Integer, String> paramMap, Map<String, Double> priceMap) {
+        for (Integer key : paramMap.keySet()) {
+            System.out.println(key + ". " + paramMap.get(key) + ": "+priceMap.get(paramMap.get(key)));
+        }
+        switch (messages.getLanguageString()) {
+            case "KOREAN":
+                System.out.println("0. 나가기");
+                break;
+            case "ENGLISH":
+                System.out.println("0. exit");
+                break;
+            default:
+                break;
+        }
+        System.out.println(">>");
+    }
+
+    @Override
+    public void printMainMenuSelectError() {
+        System.err.println(messages.getMainMenuSelectError());
+    }
+
     @Override
     public void printProductSelectError() {
         System.err.println(messages.getProductSelectError());
+    }
+
+    @Override
+    public void printInsertersCurrencyNotEqualError() {
+        System.err.println(messages.getInsertersCurrencyNotEqual());
+    }
+
+    @Override
+    public void printMachinesCurrencyNotEqualError() {
+        System.err.println(messages.getMachinesCurrencyNotEqual());
     }
 }

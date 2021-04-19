@@ -9,20 +9,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class AVendingMachine implements VendingMachine {
+public class EVendingMachine implements VendingMachine {
 
-    private final Currency supportCurrency = Currency.KRW;
+    private final Currency supportCurrency = Currency.USD;
 
     private double money;
     private boolean LANGUAGE_SELECTED = false;
 
     private final Map<String, Double> productsAndPrices = new HashMap<String, Double>(){{
-        put("캔음료", 500.0);
-        put("신문", 1000.0);
+        put("Coke", 5.0);
+        put("NewsPaper", 10.0);
     }};
     private final Map<Integer,String> optAndProducts = new HashMap<Integer,String>(){{
-        put(1,"캔음료");
-        put(2, "신문");
+        put(1,"Coke");
+        put(2, "NewsPaper");
     }};
     private Map<Integer, String> coinKinds;// ci 에서 받아올 coin 종류 맵
     private Map<Integer, String> billKinds;// bi 에서 받아올 bill 종류 맵
@@ -33,7 +33,7 @@ public class AVendingMachine implements VendingMachine {
     private final BillInserter bi;
 
 
-    public AVendingMachine(Display display, CoinInserter ci, BillInserter bi) {
+    public EVendingMachine(Display display, CoinInserter ci, BillInserter bi) {
         this.display = display;
         this.ci = ci;
         this.bi = bi;
