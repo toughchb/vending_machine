@@ -49,6 +49,11 @@ public class KoreanMessages implements Messages{
     }
 
     @Override
+    public String getMoneyMenuSelectError() {
+        return "잘못된 돈 종류의 선택 입니다.";
+    }
+
+    @Override
     public String getCoinSelectError() {
         return "잘못된 동전의 선택 입니다.";
     }

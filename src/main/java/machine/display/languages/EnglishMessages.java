@@ -48,6 +48,11 @@ public class EnglishMessages implements Messages{
     }
 
     @Override
+    public String getMoneyMenuSelectError() {
+        return "Money Menu Select Error";
+    }
+
+    @Override
     public String getCoinSelectError() {
         return "Coin Select Error";
     }

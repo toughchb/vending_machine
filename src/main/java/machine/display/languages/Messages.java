@@ -22,6 +22,8 @@ public interface Messages {
 
      String getProductSelectError();
 
+     String getMoneyMenuSelectError();
+
      String getSelectProductMenu();
 
      String getNotEnoughMoneyError();

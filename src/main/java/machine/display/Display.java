@@ -66,6 +66,8 @@ public abstract class Display {
 
     abstract public void printMainMenuSelectError();
 
+    abstract public void printMoneyMenuSelectError();
+
     abstract public void printCoinSelectError();
 
     abstract public void printBillSelectError();

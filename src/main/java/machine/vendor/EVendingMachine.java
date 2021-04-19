@@ -106,6 +106,9 @@ public class EVendingMachine implements VendingMachine {
             case 2:
                 selectBillKind();
                 break;
+            default:
+                display.printMoneyMenuSelectError();
+                return;
         }
     }
 

@@ -104,6 +104,11 @@ public class DDisplay extends Display{
     }
 
     @Override
+    public void printMoneyMenuSelectError() {
+        System.err.println(messages.getMoneyMenuSelectError());
+    }
+
+    @Override
     public void printProductSelectError() {
         System.err.println(messages.getProductSelectError());
     }
