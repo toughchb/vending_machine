@@ -1,5 +1,7 @@
 package machine.money;
 
+import java.util.Objects;
+
 public class Money {
 
     private int money;
@@ -19,11 +21,34 @@ public class Money {
         return new Money(money);
     }
 
-    public void addMoney(BillKind bill) {
+    public Money addBill(Bill bill) {
         money += bill.getMoney();
+        return Money.from(money);
     }
 
     public int getMoney() {
         return money;
+    }
+
+    public Money subBill(Bill bill) {
+        money -= bill.getMoney();
+        return Money.from(money);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Money money1 = (Money) o;
+        return money == money1.money;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(money);
     }
 }
